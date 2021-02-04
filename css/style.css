@@ -152,7 +152,7 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 15px;
   outline: 1px solid blue;
 }
 
@@ -163,10 +163,18 @@ body {
 
 .top .header {
   outline: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 39px;
+  width: 100%;
 }
 
 .top .header .logo {
-  padding-top: 39px;
+  margin-right: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,6 +188,66 @@ body {
   line-height: 61px;
   font-weight: normal;
   font-family: "Raleway", sans-serif;
+}
+
+.top .header .menu {
+  outline: 1px solid rosybrown;
+  margin-right: 30px;
+  padding-top: 19px;
+}
+
+.top .header .menu .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top .header .menu .menu__list .menu__item {
+  margin-right: 24px;
+}
+
+.top .header .menu .menu__list .menu__item:last-child {
+  margin-right: 0;
+}
+
+.top .header .menu .menu__list .menu__item .menu__link {
+  color: #fff;
+  font-size: 14px;
+  line-height: 17px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.top .header .menu .menu__list .menu__item .menu__link:hover {
+  color: #C7B299;
+}
+
+.top .header .icons {
+  outline: 1px solid rosybrown;
+  padding-top: 15px;
+}
+
+.top .header .icons .icons__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top .header .icons .icons__list .icons__item {
+  margin-right: 30px;
+}
+
+.top .header .icons .icons__list .icons__item:last-child {
+  margin-right: 0;
+}
+
+.top .header .icons .icons__list .icons__item .icons__link {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.top .header .icons .icons__list .icons__item .icons__link:hover path {
+  fill: #C7B299;
 }
 
 .content {
