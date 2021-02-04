@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -83,6 +84,59 @@ h6 {
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: local("☺"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("☺"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("☺"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: local("☺"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: local("☺"), url("../fonts/Raleway-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: local("☺"), url("../fonts/Raleway-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.top, .content .presentation, .content .partners {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -99,18 +153,33 @@ h6 {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
+  outline: 1px solid blue;
 }
 
 .top {
   background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
   background-image: url(../img/bg_top.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+
+.top .header {
+  outline: 1px solid red;
+}
+
+.top .header .logo {
+  padding-top: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: 1px solid rosybrown;
 }
 
 .top .header .logo__text {
+  padding-top: 7px;
   color: #fff;
+  font-size: 52px;
+  line-height: 61px;
+  font-weight: normal;
+  font-family: "Raleway", sans-serif;
 }
 
 .content {
@@ -130,9 +199,6 @@ h6 {
 .content .presentation {
   background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
   background-image: url(../img/bg_presentation.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .content .mobile {
@@ -146,9 +212,6 @@ h6 {
 .content .partners {
   background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
   background-image: url(../img/bg_partners.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .footer .first-footer {

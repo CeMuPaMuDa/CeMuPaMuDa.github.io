@@ -1,80 +1,211 @@
 //reset style
 @import "reset.scss";
-//import fonts
 
+//import fonts
+@font-face {
+  font-family: "Roboto";
+  src: local("☺"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("☺"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("☺"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: local("☺"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: local("☺"), url("../fonts/Raleway-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: local("☺"), url("../fonts/Raleway-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+//variables
+$ctr: center;
+//colors
+$color_wt:#fff;
+$color_bk:#000;
+$color_btn:#988574;
+$color_hv:#C7B299;
+$color_h:#555555;
+$color_p:#8C8C8C;
+
+//mixins
+@mixin txtstyle ($fz, $lh) {
+  font-size: $fz;
+  line-height: $lh;
+}
+
+@mixin fontstyle ($fw, $ff) {
+  font-weight: $fw;
+  font-family: $ff, sans-serif;
+}
+
+//templates 
+%bfset {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+%h1 {
+  @include txtstyle(52px, 61px);
+  @include fontstyle(600px, "Raleway");
+}
+
+%h2 {
+  @include txtstyle(30px, 35px);
+  @include fontstyle(600px, "Raleway");
+  color: $color_h;
+}
+
+%h3 {
+  @include txtstyle(28px, 33px);
+  @include fontstyle(normal,"Raleway" );
+}
+
+%h4 {
+  @include txtstyle(24px, 28px);
+  @include fontstyle(600px, "Raleway");
+}
+
+%h5 {
+  @include txtstyle(22px, 26px);
+  @include fontstyle(600px, "Raleway");
+  color: $color_h;
+}
+
+%h6 {
+  @include txtstyle(20px, 23px);
+  @include fontstyle(500px, "Raleway");
+}
+
+%pg {
+  @include txtstyle(16px, 20px);
+  @include fontstyle(300px, "Montserrat");
+}
+%btns {
+  @include txtstyle(14px, 16px);
+  @include fontstyle(normal, "Roboto");
+  color: $color_wt
+}
 // all page
+body {
+  @include fontstyle (normal, "Montserrat");
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
-
+  outline: 1px solid blue;
 }
+
 //blocks
 .top {
   background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
   background-image: url(../img/bg_top.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @extend %bfset;
 
-    .header {
-      .logo{
-        &__text{
-          color: #fff;
-          &::before{
-            content: "";
-            background-image: ;
-          }
-        }
+  .header {
+    outline: 1px solid red;
+
+    .logo {
+      padding-top: 39px;
+      display: flex;
+      outline: 1px solid rosybrown;
+
+      &__text {
+        padding-top: 7px;
+        color: #fff;
+        @include txtstyle (52px, 61px);
+        @include fontstyle(normal, "Raleway");
       }
-      .menu{}
-      .icons{}
     }
-    .slider {}
+
+    .menu {}
+
+    .icons {}
+  }
+
+  .slider {}
 }
 
 .content {
   flex: 1 1 auto;
-  
-    .services{}
-    .realization{
-      background: #FBFAF8;
-    }
-    .purchase{
-      background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
-    }
-    .project{}
-    .presentation{
-      background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
-      background-image: url(../img/bg_presentation.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-    .mobile{
-      background: #FBFAF8;
-    }
-    .counters{
-      background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
-    }
-    .posts{}
-    .partners{
-      background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
-      background-image: url(../img/bg_partners.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
+
+  .services {}
+
+  .realization {
+    background: #FBFAF8;
+  }
+
+  .purchase {
+    background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+  }
+
+  .project {}
+
+  .presentation {
+    background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+    background-image: url(../img/bg_presentation.png);
+    @extend %bfset
+  }
+
+  .mobile {
+    background: #FBFAF8;
+  }
+
+  .counters {
+    background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+  }
+
+  .posts {}
+
+  .partners {
+    background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+    background-image: url(../img/bg_partners.png);
+    @extend %bfset
+  }
 }
 
 .footer {
+  .first-footer {
+    background: #191919;
+  }
 
-    .first-footer{background: #191919;}
-    .bottom-footter{background: #101010;}
+  .bottom-footter {
+    background: #101010;
+  }
 }
