@@ -1,20 +1,80 @@
 //reset style
 @import "reset.scss";
+//import fonts
 
+// all page
 .wrapper {
-}
-.container{
-  
-}
-.top {
-}
-.header {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+
 }
-.slider {
+//blocks
+.top {
+  background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+  background-image: url(../img/bg_top.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+    .header {
+      .logo{
+        &__text{
+          color: #fff;
+          &::before{
+            content: "";
+            background-image: ;
+          }
+        }
+      }
+      .menu{}
+      .icons{}
+    }
+    .slider {}
 }
+
 .content {
+  flex: 1 1 auto;
+  
+    .services{}
+    .realization{
+      background: #FBFAF8;
+    }
+    .purchase{
+      background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+    }
+    .project{}
+    .presentation{
+      background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+      background-image: url(../img/bg_presentation.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .mobile{
+      background: #FBFAF8;
+    }
+    .counters{
+      background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+    }
+    .posts{}
+    .partners{
+      background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+      background-image: url(../img/bg_partners.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
 }
+
 .footer {
+
+    .first-footer{background: #191919;}
+    .bottom-footter{background: #101010;}
 }
