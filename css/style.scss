@@ -4,42 +4,42 @@
 //import fonts
 @font-face {
   font-family: "Roboto";
-  src: local("☺"), url("../fonts/Roboto-Regular.woff") format("woff");
+  src: local("Roboto"), url("../fonts/Roboto-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: local("☺"), url("../fonts/Montserrat-Light.woff") format("woff");
+  src: local("Montserrat"), url("../fonts/Montserrat-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: local("☺"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: local("Montserrat"), url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Raleway";
-  src: local("☺"), url("../fonts/Raleway-Regular.woff") format("woff");
+  src: local("Raleway"), url("../fonts/Raleway-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Raleway";
-  src: local("☺"), url("../fonts/Raleway-Medium.woff") format("woff");
+  src: local("Raleway"), url("../fonts/Raleway-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Raleway";
-  src: local("☺"), url("../fonts/Raleway-SemiBold.woff") format("woff");
+  src: local("Raleway"), url("../fonts/Raleway-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
@@ -75,12 +75,12 @@ $td: 0.3s;
 
 %h1 {
   @include txtstyle(52px, 61px);
-  @include fontstyle(600px, "Raleway");
+  @include fontstyle(600, "Raleway");
 }
 
 %h2 {
   @include txtstyle(30px, 35px);
-  @include fontstyle(600px, "Raleway");
+  @include fontstyle(600, "Raleway");
   color: $color_h;
 }
 
@@ -91,23 +91,23 @@ $td: 0.3s;
 
 %h4 {
   @include txtstyle(24px, 28px);
-  @include fontstyle(600px, "Raleway");
+  @include fontstyle(600, "Raleway");
 }
 
 %h5 {
   @include txtstyle(22px, 26px);
-  @include fontstyle(600px, "Raleway");
+  @include fontstyle(600, "Raleway");
   color: $color_h;
 }
 
 %h6 {
   @include txtstyle(20px, 23px);
-  @include fontstyle(500px, "Raleway");
+  @include fontstyle(500, "Raleway");
 }
 
 %pg {
   @include txtstyle(16px, 20px);
-  @include fontstyle(300px, "Montserrat");
+  @include fontstyle(300, "Montserrat");
 }
 
 %btns {
@@ -132,21 +132,21 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 15px;
-  outline: 1px solid blue;
+
 }
 
 //blocks
 .top {
-  background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
   background-image: url(../img/bg_top.png);
   @extend %bfset;
+  position: relative;
+
 
   .header {
     outline: 1px solid red;
     display: flex;
     justify-content: space-between;
     padding-top: 39px;
-    width: 100%;
 
     .logo {
       margin-right: 30px;
@@ -155,8 +155,8 @@ body {
 
       &__text {
         padding-top: 7px;
-        color: #fff;
-        @include txtstyle (52px, 61px);
+        color: $color_wt;
+        @include txtstyle (34px, 40px);
         @include fontstyle(normal, "Raleway");
       }
     }
@@ -166,13 +166,11 @@ body {
       margin-right: 30px;
       padding-top: 19px;
 
-      .menu__list {
+      &__list {
         display: flex;
 
         .menu__item {
           margin-right: 24px;
-
-
 
           &:last-child {
             margin-right: 0;
@@ -197,10 +195,8 @@ body {
       outline: 1px solid rosybrown;
       padding-top: 15px;
 
-      .icons__list {
+      &__list {
         display: flex;
-
-
 
         .icons__item {
           margin-right: 30px;
@@ -223,7 +219,108 @@ body {
     }
   }
 
-  .slider {}
+  .slider {
+    outline: 1px solid red;
+    padding-top: 334px;
+
+    &__top {
+      display: flex;
+      justify-content: $ctr;
+      outline: 1px solid hotpink;
+      margin-bottom: 315px;
+
+      .slider__left {
+        outline: 1px solid rosybrown;
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 451px;
+        left: 162px;
+      }
+
+      .slider__text {
+        outline: 1px solid rosybrown;
+        display: flex;
+        flex-direction: column;
+        text-align: $ctr;
+        align-items: $ctr;
+
+        .slider__title {
+          @include txtstyle(36px, 42px);
+          @include fontstyle(500, "Raleway");
+          color: $color_wt;
+          margin-bottom: 1px;
+        }
+
+        .slider__heading {
+          @extend %h1;
+          color: $color_wt;
+          margin-bottom: 4px;
+        }
+
+        .slider_paragraph {
+          max-width: 563px;
+          color: $color_wt;
+          @include txtstyle(16px, 20px);
+          color: $color_wt;
+          margin-bottom: 39px;
+
+        }
+
+        .slider__btn {
+          @extend %btns;
+          border: 1px solid $color_btn;
+          background-color: $color_btn;
+          border-radius: 3px;
+          padding: 19px 40px;
+          transition-duration: $td;
+
+          &:hover,
+          &:focus {
+            background: #ffffff;
+            color: #988574;
+          }
+        }
+      }
+
+      .slider__right {
+        outline: 1px solidhotpink;
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 451px;
+        right: 162px;
+      }
+    }
+
+    &__bottom {
+      outline: 1px solid rosybrown;
+      display: flex;
+      justify-content: $ctr;
+      padding-bottom: 49px;
+
+      .slider__bottom_btn {
+        margin-right: 7px;
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        transition-duration: $td;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:focus,
+        &:hover {
+          background-color: transparent;
+        }
+
+      }
+    }
+  }
+
 }
 
 .content {
@@ -242,7 +339,6 @@ body {
   .project {}
 
   .presentation {
-    background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
     background-image: url(../img/bg_presentation.png);
     @extend %bfset;
   }
@@ -258,7 +354,6 @@ body {
   .posts {}
 
   .partners {
-    background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
     background-image: url(../img/bg_partners.png);
     @extend %bfset;
   }
