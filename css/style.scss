@@ -141,7 +141,6 @@ body {
   background-image: url(../img/bg_top.png);
   @extend %bfset;
   position: relative;
-  outline: 1px solid blue;
 
   .header {
     display: flex;
@@ -325,8 +324,6 @@ body {
   outline: 1px solid purple;
 
   .services {
-    outline: 1px solid blue;
-
     &__block {
       padding: 90px 0;
 
@@ -340,7 +337,7 @@ body {
           display: flex;
           flex-direction: column;
           align-items: $ctr;
-          justify-content: space-between;
+          text-align: $ctr;
           margin-right: 30px;
           transition-duration: $td;
           padding: 3px;
@@ -378,16 +375,16 @@ body {
             @include txtstyle(14px, 17px);
           }
 
-          .services__line {}
+
+
+
         }
-
-
       }
+
+
+
+
     }
-
-
-
-
   }
 
   .realization {
@@ -442,5 +439,33 @@ body {
   .bottom-footter {
     background: #101010;
     outline: 1px solid blue;
+
+    .bottom-footter-block {
+
+
+      .bottom-footer__list {
+        display: flex;
+      }
+
+      .bottom-footer__li {
+        margin-right: 25px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .bottom-footer__link {
+        @include txtstyle(13px, 16px);
+        @include fontstyle(300, "Montserrat");
+        color: #555555;
+
+        &:hover {
+          color: #BAA78F;
+        }
+      }
+    }
+
+
   }
 }

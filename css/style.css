@@ -188,7 +188,6 @@ body {
 .top {
   background-image: url(../img/bg_top.png);
   position: relative;
-  outline: 1px solid blue;
 }
 
 .top .header {
@@ -392,10 +391,6 @@ body {
   outline: 1px solid purple;
 }
 
-.content .services {
-  outline: 1px solid blue;
-}
-
 .content .services__block {
   padding: 90px 0;
 }
@@ -421,9 +416,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  text-align: center;
   margin-right: 30px;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
@@ -510,5 +503,31 @@ body {
 .footer .bottom-footter {
   background: #101010;
   outline: 1px solid blue;
+}
+
+.footer .bottom-footter .bottom-footter-block .bottom-footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .bottom-footter .bottom-footter-block .bottom-footer__li {
+  margin-right: 25px;
+}
+
+.footer .bottom-footter .bottom-footter-block .bottom-footer__li:last-child {
+  margin-right: 0;
+}
+
+.footer .bottom-footter .bottom-footter-block .bottom-footer__link {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  color: #555555;
+}
+
+.footer .bottom-footter .bottom-footter-block .bottom-footer__link:hover {
+  color: #BAA78F;
 }
 /*# sourceMappingURL=style.css.map */
