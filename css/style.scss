@@ -132,6 +132,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 15px;
+  outline: 1px solid red;
 
 }
 
@@ -140,10 +141,9 @@ body {
   background-image: url(../img/bg_top.png);
   @extend %bfset;
   position: relative;
-
+  outline: 1px solid blue;
 
   .header {
-    outline: 1px solid red;
     display: flex;
     justify-content: space-between;
     padding-top: 39px;
@@ -151,7 +151,7 @@ body {
     .logo {
       margin-right: 30px;
       display: flex;
-      outline: 1px solid rosybrown;
+
 
       &__text {
         padding-top: 7px;
@@ -162,7 +162,6 @@ body {
     }
 
     .menu {
-      outline: 1px solid rosybrown;
       margin-right: 30px;
       padding-top: 19px;
 
@@ -192,7 +191,6 @@ body {
     }
 
     .icons {
-      outline: 1px solid rosybrown;
       padding-top: 15px;
 
       &__list {
@@ -220,17 +218,16 @@ body {
   }
 
   .slider {
-    outline: 1px solid red;
+
     padding-top: 334px;
 
     &__top {
       display: flex;
       justify-content: $ctr;
-      outline: 1px solid hotpink;
       margin-bottom: 315px;
 
       .slider__left {
-        outline: 1px solid rosybrown;
+
         background-color: Transparent;
         background-repeat: no-repeat;
         position: absolute;
@@ -239,7 +236,7 @@ body {
       }
 
       .slider__text {
-        outline: 1px solid rosybrown;
+
         display: flex;
         flex-direction: column;
         text-align: $ctr;
@@ -284,7 +281,7 @@ body {
       }
 
       .slider__right {
-        outline: 1px solidhotpink;
+
         background-color: Transparent;
         background-repeat: no-repeat;
         position: absolute;
@@ -294,7 +291,7 @@ body {
     }
 
     &__bottom {
-      outline: 1px solid rosybrown;
+
       display: flex;
       justify-content: $ctr;
       padding-bottom: 49px;
@@ -325,46 +322,125 @@ body {
 
 .content {
   flex: 1 1 auto;
+  outline: 1px solid purple;
 
-  .services {}
+  .services {
+    outline: 1px solid blue;
+
+    &__block {
+      padding: 90px 0;
+
+      .services__skills {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+
+
+        .services__col {
+          display: flex;
+          flex-direction: column;
+          align-items: $ctr;
+          justify-content: space-between;
+          margin-right: 30px;
+          transition-duration: $td;
+          padding: 3px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &:hover path {
+            fill: $color_hv;
+          }
+
+          &:hover rect {
+            fill: $color_hv;
+          }
+
+          &:hover .services__title {
+            color: $color_hv;
+
+          }
+
+
+          .services__icons {
+            margin-bottom: 30px;
+          }
+
+          .services__title {
+            margin-bottom: 20px;
+            @extend %h5;
+          }
+
+          .services__text {
+            margin-bottom: 30px;
+            @extend %pg;
+            @include txtstyle(14px, 17px);
+          }
+
+          .services__line {}
+        }
+
+
+      }
+    }
+
+
+
+
+  }
 
   .realization {
     background: #FBFAF8;
+    outline: 1px solid blue;
   }
 
   .purchase {
     background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+    outline: 1px solid blue;
   }
 
-  .project {}
+  .project {
+    outline: 1px solid blue;
+  }
 
   .presentation {
     background-image: url(../img/bg_presentation.png);
     @extend %bfset;
+    outline: 1px solid blue;
   }
 
   .mobile {
     background: #FBFAF8;
+    outline: 1px solid blue;
   }
 
   .counters {
     background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211B19 0%, #4E3326 100%);
+    outline: 1px solid blue;
   }
 
-  .posts {}
+  .posts {
+    outline: 1px solid blue;
+  }
 
   .partners {
     background-image: url(../img/bg_partners.png);
     @extend %bfset;
+    outline: 1px solid blue;
   }
 }
 
 .footer {
+  outline: 1px solid purple;
+
   .first-footer {
     background: #191919;
+    outline: 1px solid blue;
   }
 
   .bottom-footter {
     background: #101010;
+    outline: 1px solid blue;
   }
 }
