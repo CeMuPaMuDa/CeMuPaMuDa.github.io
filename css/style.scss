@@ -232,6 +232,12 @@ body {
         position: absolute;
         top: 451px;
         left: 162px;
+        transition-duration: $td;
+
+        &:hover path {
+          fill: #D3C1AC;
+          opacity: 1;
+        }
       }
 
       .slider__text {
@@ -286,6 +292,12 @@ body {
         position: absolute;
         top: 451px;
         right: 162px;
+        transition-duration: $td;
+
+        &:hover path {
+          fill: #D3C1AC;
+          opacity: 1;
+        }
       }
     }
 
