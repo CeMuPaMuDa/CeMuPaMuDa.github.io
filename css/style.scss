@@ -260,6 +260,14 @@ body {
           fill: #D3C1AC;
           opacity: 1;
         }
+
+        @media (max-width: 1010px) {
+          left: 62px;
+        }
+
+        @media (max-width: 800px) {
+          display: none;
+        }
       }
 
       .slider__text {
@@ -319,6 +327,14 @@ body {
         &:hover path {
           fill: #D3C1AC;
           opacity: 1;
+        }
+
+        @media (max-width: 1010px) {
+          right: 62px;
+        }
+
+        @media (max-width: 800px) {
+          display: none;
         }
       }
     }
